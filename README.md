@@ -43,6 +43,8 @@ source venv/bin/activate  # On Windows: venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
+**Download Dataset from [CIC-IDS 2017](https://www.kaggle.com/datasets/chethuhn/network-intrusion-dataset) and put it unpacked inside the "data" folder
+
 ### Running the Project
 
 To run the project with default settings:
