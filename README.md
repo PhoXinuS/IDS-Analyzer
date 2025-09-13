@@ -47,6 +47,8 @@ pip install -r requirements.txt
 
 Watch out! It must be a full .csv version containing **timestamps**, not the reduced one that is accessible on Kaggle.
 
+Additionaly, the datasets should be processed using the data_expansion.py
+
 ### Running the Project
 
 To run the project with default settings:
