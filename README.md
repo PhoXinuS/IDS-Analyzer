@@ -4,7 +4,7 @@
 
 Cybersecurity increasingly relies on big data analysis to understand and detect attacks.
 IDS (Intrusion Detection Systems) collect network logs that help identify suspicious
-behaviors. This project proposes to use a [CIC-IDS 2017](https://www.kaggle.com/datasets/chethuhn/network-intrusion-dataset) dataset to explore and analyze these
+behaviors. This project proposes to use a [CIC-IDS 2017](https://www.unb.ca/cic/datasets/ids-2017.html) dataset to explore and analyze these
 data, and to build an interactive dashboard.
 
 
@@ -43,7 +43,9 @@ source venv/bin/activate  # On Windows: venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
-**Download Dataset from [CIC-IDS 2017](https://www.kaggle.com/datasets/chethuhn/network-intrusion-dataset) and put it unpacked inside the "data" folder
+**Download Dataset from [CIC-IDS 2017](https://www.unb.ca/cic/datasets/ids-2017.html) and put it unpacked inside the "data" folder**
+
+Watch out! It must be a full .csv version containing **timestamps**, not the reduced one that is accessible on Kaggle.
 
 ### Running the Project
 
