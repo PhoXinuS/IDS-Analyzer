@@ -14,10 +14,16 @@ class DataExpander:
             "Fri_3": "../data/Friday-WorkingHours-Afternoon-DDos.pcap_ISCX.csv"
         }
 
+    def clean_labels(self, df: pd.DataFrame, label_col="Label") -> pd.DataFrame:
+        df[label_col] = df[label_col].str.replace(r'[^\w\s-]', '-', regex=True)
+        df[label_col] = df[label_col].str.replace(r'Web Attack -', 'Web Attack -', regex=False)
+        return df
+
     def load_dataset(self, day, encoding="latin1"):
         df = pd.read_csv(self.datasets[day], encoding=encoding)
         df.columns = df.columns.str.strip()
         df = df.dropna(how="any")
+        df = self.clean_labels(df)
         return df
 
     def expand(self, df: pd.DataFrame) -> pd.DataFrame:
@@ -68,3 +74,13 @@ if __name__ == "__main__":
         df_expanded = expander.expand(df)
         out_path = f"../data/{day}-Expanded.csv"
         expander.save_expanded(df_expanded, out_path)
+
+    thu_parts = ['Thu_1', 'Thu_2']
+    thu_dfs = [expander.expand(expander.load_dataset(day)) for day in thu_parts]
+    thu_full = pd.concat(thu_dfs, ignore_index=True)
+    expander.save_expanded(thu_full, "../data/Thu-Expanded.csv")
+
+    fri_parts = ['Fri_1', 'Fri_2', 'Fri_3']
+    fri_dfs = [expander.expand(expander.load_dataset(day)) for day in fri_parts]
+    fri_full = pd.concat(fri_dfs, ignore_index=True)
+    expander.save_expanded(fri_full, "../data/Fri-Expanded.csv")
