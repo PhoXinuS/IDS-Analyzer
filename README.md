@@ -12,7 +12,6 @@ data, and to build an interactive dashboard.
 
 - **Piotr Szkoda** ([GitHub](https://github.com/PhoXinuS))
 - **Martyna Kochalska** ([GitHub](https://github.com/pyskaa0506))
-- **Jakub Kostrzewa**
 - **Marten Tschatschandise**
 
 ## Technologies Used

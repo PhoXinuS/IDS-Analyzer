@@ -38,8 +38,6 @@ sidebar = html.Div(
             [
                 dbc.NavLink("General Information", href="/", active="exact"),
 
-                dbc.NavLink("Pho and Sakura", href="/pholovessakura", active="exact"),
-
                 dbc.NavLink("Benign", href="/benign", active="exact"),
 
                 # DoS Attacks
