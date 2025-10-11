@@ -1,0 +1,20 @@
+Label,Protocol_Name,Percentage
+BENIGN,Other,0.07436128496300416
+BENIGN,TCP,55.94723076814767
+BENIGN,UDP,43.97840794688932
+Bot,TCP,100.0
+DDoS,TCP,100.0
+DoS GoldenEye,TCP,100.0
+DoS Hulk,TCP,100.0
+DoS Slowhttptest,TCP,100.0
+DoS slowloris,TCP,100.0
+FTP-Patator,TCP,100.0
+Heartbleed,TCP,100.0
+Infiltration,TCP,100.0
+PortScan,Other,0.003775246964072233
+PortScan,TCP,99.99559554520859
+PortScan,UDP,0.0006292078273453721
+SSH-Patator,TCP,100.0
+Web Attack - Brute Force,TCP,100.0
+Web Attack - Sql Injection,TCP,100.0
+Web Attack - XSS,TCP,100.0
