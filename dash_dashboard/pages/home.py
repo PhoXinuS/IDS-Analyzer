@@ -95,6 +95,39 @@ stacked_fig.update_layout(
     xaxis={'categoryorder': 'total descending'}
 )
 
+# scatter log chart
+scatter_df = pd.read_csv("assets/scatter_packet_len.csv")
+
+scatter_df = scatter_df[
+    (scatter_df['Total Length of Fwd Packets'] > 0) &
+    (scatter_df['Total Length of Bwd Packets'] > 0)
+]
+
+scatter_fig = go.Figure()
+for label in sorted(scatter_df['Label'].unique()):
+    data = scatter_df[scatter_df['Label'] == label]
+    scatter_fig.add_trace(go.Scatter(
+        x=data['Total Length of Fwd Packets'],
+        y=data['Total Length of Bwd Packets'],
+        name=label,
+        mode='markers',
+        marker=dict(size=5, opacity=0.7),
+        text=data['Label'],
+        hovertemplate="Label: %{text}<br>Fwd: %{x}<br>Bck: %{y}<extra></extra>"
+    ))
+
+scatter_fig.update_layout(
+    title_text="Relationship between Forward and Backward Packets (Log Scale)",
+    xaxis_title="Total Fwd Packets (Log Scale)",
+    yaxis_title="Total Backward Packets (Log Scale)",
+    height=500,
+    legend_title_text='Attack Type',
+    xaxis_type="log",
+    yaxis_type="log"
+)
+
+
+
 # --------
 layout = html.Div([
     html.H3("Benign Traffic and Attack Overview", className="mb-4"),
@@ -174,6 +207,21 @@ dbc.Card([
                 "Lorem ipsum "
                 "Lorem ipsum 2",
                 color="primary",
+                className="mt-2",
+                style={"font-size": "0.9rem"}
+            )
+        ])
+    ], className="mb-4 shadow-sm"),
+
+
+    # card 5
+    dbc.Card([
+        dbc.CardBody([
+            dcc.Graph(figure=scatter_fig),
+            dbc.Alert(
+                "Lorem ipsum "
+                "Lorem ipsum 2",
+                color="info",
                 className="mt-2",
                 style={"font-size": "0.9rem"}
             )
