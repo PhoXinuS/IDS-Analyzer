@@ -1,0 +1,15 @@
+Label,Attack_Count,Benign_Count,Attack_Original,Benign_Original,Balanced
+Bot,1966,1966,1966,2272688,True
+DDoS,128027,100000,128027,2272688,True
+DoS GoldenEye,10293,10293,10293,2272688,True
+DoS Hulk,230124,100000,230124,2272688,True
+DoS Slowhttptest,5499,5499,5499,2272688,True
+DoS slowloris,5796,5796,5796,2272688,True
+FTP-Patator,7938,7938,7938,2272688,True
+Heartbleed,11,11,11,2272688,True
+Infiltration,36,36,36,2272688,True
+PortScan,158930,100000,158930,2272688,True
+SSH-Patator,5897,5897,5897,2272688,True
+Web Attack - Brute Force,1507,1507,1507,2272688,True
+Web Attack - Sql Injection,21,21,21,2272688,True
+Web Attack - XSS,652,652,652,2272688,True
