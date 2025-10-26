@@ -19,7 +19,7 @@ for _, row in label_counts_df.iterrows():
     ))
 
 bar_fig.update_layout(
-    title_text="Distribution of Traffic Types (Full Dataset)",
+    title_text="Distribution of Traffic Types",
     xaxis_title="Traffic/Attack Type (Label)",
     yaxis_title="Number of Occurrences",
     height=500,
@@ -43,7 +43,7 @@ for label, row in box_df.iterrows():
     ))
 
 box_fig.update_layout(
-    title_text="Distribution of Attack Durations (Full Dataset)",
+    title_text="Distribution of Attack Durations",
     xaxis_title="Traffic/Attack Type (Label)",
     yaxis_title="Flow Duration (Log Scale)",
     yaxis_type="log",
@@ -65,7 +65,7 @@ for label in sorted(violin_df['Label'].unique()):
     ))
 
 violin_fig.update_layout(
-    title_text="Distribution of Average Packet Sizes (Full Dataset)",
+    title_text="Distribution of Average Packet Sizes",
     xaxis_title="Traffic/Attack Type (Label)",
     yaxis_title="Average Packet Size",
     height=500,
@@ -117,7 +117,7 @@ for label in sorted(scatter_df['Label'].unique()):
     ))
 
 scatter_fig.update_layout(
-    title_text="Relationship between Forward and Backward Packets (Log Scale)",
+    title_text="Relationship between Forward and Backward Packets",
     xaxis_title="Total Fwd Packets (Log Scale)",
     yaxis_title="Total Backward Packets (Log Scale)",
     height=500,
@@ -161,8 +161,8 @@ dbc.Card([
         html.Div(id='chart-display'), 
 
         dbc.Alert(
-            "Lorem ipsum "
-            "Lorem ipsum 2",
+            "Distribution of attacks displayed either as sunburst or a bar chart."
+            " BENIGN - Normal user traffic accounted for comparison.",
             color="primary",
             className="mt-2",
             style={"font-size": "0.9rem"}
