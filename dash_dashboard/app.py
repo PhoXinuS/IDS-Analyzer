@@ -35,7 +35,7 @@ dropdown_options = [
 ]
 
 navbar = html.Div([
-    html.H4("IDS Analyzer Dashboard", className="m-0", style={"color": "#0d6efd"}),
+    html.H4("IDS Analyzer Dashboard", className="m-0", style={"color": "#0A9EBC"}),
 
     dcc.Dropdown(
         id="page-selector",

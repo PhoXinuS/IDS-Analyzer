@@ -161,9 +161,12 @@ dbc.Card([
         html.Div(id='chart-display'), 
 
         dbc.Alert(
-            "Distribution of attacks displayed either as sunburst or a bar chart."
-            " BENIGN - Normal user traffic accounted for comparison.",
-            color="primary",
+            [
+            html.I(className="bi bi-info-circle"),
+            " Distribution of attacks displayed either as sunburst or a bar chart. "
+            "BENIGN - Normal user traffic accounted for comparison."
+            ],
+            color="info",
             className="mt-2",
             style={"font-size": "0.9rem"}
         )
@@ -176,8 +179,11 @@ dbc.Card([
         dbc.CardBody([
             dcc.Graph(figure=box_fig),
             dbc.Alert(
-                "Lorem ipsum "
-                "Lorem ipsum 2",
+                [
+                    html.I(className="bi bi-info-circle"),
+                    " Comparison of flow duration between BENIGN (normal traffic) and different attack types. ",
+                    "Even though many attacks have visible fingerprints dependent on the attack type, there are some like bot or patator attacks, which are a lot more difficult to distinguish."
+                ],
                 color="info",
                 className="mt-2",
                 style={"font-size": "0.9rem"}
@@ -190,9 +196,12 @@ dbc.Card([
         dbc.CardBody([
             dcc.Graph(figure=violin_fig),
             dbc.Alert(
-                "Lorem ipsum "
-                "Lorem ipsum 2",
-                color="secondary",
+                [
+                    html.I(className="bi bi-info-circle"),
+                    " Here as well we can observe basic comparison to BENIGN in packet size. "
+                    "As many attacks try to exploit different weaknesses, for example heartbleed maintaining very high packets size to gather more data, some still disguise and show more \"normal\" patterns."
+                ],
+                color="info",
                 className="mt-2",
                 style={"font-size": "0.9rem"}
             )
@@ -203,13 +212,13 @@ dbc.Card([
     dbc.Card([
         dbc.CardBody([
             dcc.Graph(figure=stacked_fig),
-            dbc.Alert(
-                "Lorem ipsum "
-                "Lorem ipsum 2",
-                color="primary",
-                className="mt-2",
-                style={"font-size": "0.9rem"}
-            )
+            # dbc.Alert(
+            #     "Generally attacks use TCP protocol because it takes mor"
+            #     "Lorem ipsum 2",
+            #     color="primary",
+            #     className="mt-2",
+            #     style={"font-size": "0.9rem"}
+            # )
         ])
     ], className="mb-4 shadow-sm"),
 
@@ -219,8 +228,10 @@ dbc.Card([
         dbc.CardBody([
             dcc.Graph(figure=scatter_fig),
             dbc.Alert(
-                "Lorem ipsum "
-                "Lorem ipsum 2",
+                [
+                    html.I(className="bi bi-info-circle"),
+                    " This plot allows to observe hard-coded patterns in the dynamics of different attacks, noticeable by a regular straight lines regular. And major differences in regards to sent/received packets, as regular traffic tends to keep 1:1 ratio.",
+                ],
                 color="info",
                 className="mt-2",
                 style={"font-size": "0.9rem"}

@@ -99,13 +99,15 @@ layout = html.Div([
     dbc.Card([
         dbc.CardBody([
             dcc.Graph(figure=box_fig),
-            dbc.Alert(
-                "Lorem ipsum "
-                "Lorem ipsum 2",
-                color="primary",
-                className="mt-2",
-                style={"font-size": "0.9rem"}
-            )
+            # dbc.Alert(
+            #     [
+            #         html.I(className="bi bi-info-circle"),
+            #         "Lorem ipsum 2",
+            #     ],
+            #     color="primary",
+            #     className="mt-2",
+            #     style={"font-size": "0.9rem"}
+            # )
         ])
     ], className="mb-4 shadow-sm"),
 
@@ -114,8 +116,7 @@ layout = html.Div([
         dbc.CardBody([
             dcc.Graph(figure=histogram_fig),
             dbc.Alert(
-                "Lorem ipsum "
-                "Lorem ipsum 2",
+                " As slowloris aims to maintain as many connections as possible and, in comparison to other DoS attacks, works slowly, it can be clearly seen having longer Inter-Arrival Time between to packets.",
                 color="info",
                 className="mt-2",
                 style={"font-size": "0.9rem"}
@@ -127,13 +128,13 @@ layout = html.Div([
     dbc.Card([
         dbc.CardBody([
             dcc.Graph(figure=density_fig),
-            dbc.Alert(
-                "Lorem ipsum "
-                "Lorem ipsum 2",
-                color="secondary",
-                className="mt-2",
-                style={"font-size": "0.9rem"}
-            )
+            # dbc.Alert(
+            #     "Lorem ipsum "
+            #     "Lorem ipsum 2",
+            #     color="secondary",
+            #     className="mt-2",
+            #     style={"font-size": "0.9rem"}
+            # )
         ])
     ], className="mb-4 shadow-sm"),
 ])

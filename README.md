@@ -19,7 +19,7 @@ data, and to build an interactive dashboard.
 -   **Language**: Python 3.11
 -   **Data Analysis**: Pandas, NumPy
 -   **Visualization**: Matplotlib, Seaborn, Plotly
--   **Web Framework**: Dash, Streamlit
+-   **Web Framework**: Dash
 -   **Machine Learning**: Scikit-learn, TensorFlow/Keras
 
 ## Installation and Usage
@@ -34,12 +34,12 @@ Clone the repository and install the required dependencies.
 git clone https://github.com/PhoXinuS/IDS-Analyzer.git
 cd IDS-Analyzer
 
-# Create a virtual environment
+# Create and start virtual environment
 python -m venv venv
 source venv/bin/activate  # On Windows: venv\Scripts\activate
 
 # Install dependencies
-pip install -r requirements.txt
+pip install -r /dash_dashboard/requirements.txt
 ```
 
 **Download Dataset from [CIC-IDS 2017](https://www.unb.ca/cic/datasets/ids-2017.html) and put it unpacked inside the "data" folder**
@@ -50,11 +50,24 @@ Additionaly, the datasets should be processed using the data_expansion.py
 
 ### Running the Project
 
-To run the project with default settings:
+## To run the Dash dashboard, execute:
 
 ```bash
-python main.py
+cd .\dash_dashboard\
+python .\app.py
 ```
+After that, open your web browser and navigate to `http://127.0.0.1:8050` to access the dashboard.
+
+## To run the Jupyter notebooks for data analysis, execute:
+wip
 
 ### Examples
-wip
+
+## Dashboard Screenshots
+
+![Dashboard Screenshot 1](examples/dashboard_screenshot1.png)
+![Dashboard Screenshot 2](examples/dashboard_screenshot2.png)
+
+## Data Analysis Visualizations
+![Data Analysis Screenshot 1](examples/data_analysis_screenshot1.png)
+![Data Analysis Screenshot 2](examples/data_analysis_screenshot2.png)

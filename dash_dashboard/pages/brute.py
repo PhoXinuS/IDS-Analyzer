@@ -91,9 +91,11 @@ layout = html.Div([
         dbc.CardBody([
             dcc.Graph(figure=box_fig),
             dbc.Alert(
-                "Lorem ipsum "
-                "Lorem ipsum 2",
-                color="primary",
+                [
+                    html.I(className="bi bi-info-circle"),
+                    " This plot captures both nature of more sophisticated patator attacks - designed to disguise as normal traffic - and dense nature of simpler and targeted web attack.",
+                ],
+                color="info",
                 className="mt-2",
                 style={"font-size": "0.9rem"}
             )
@@ -105,8 +107,10 @@ layout = html.Div([
         dbc.CardBody([
             dcc.Graph(figure=bar_fig),
             dbc.Alert(
-                "Lorem ipsum "
-                "Lorem ipsum 2",
+                [
+                    html.I(className="bi bi-info-circle"),
+                    " Many times those kind of brute force attacks do not wait for a full handshake moving straight to sending another request right after the syn request.",
+                ],
                 color="info",
                 className="mt-2",
                 style={"font-size": "0.9rem"}
@@ -119,9 +123,11 @@ layout = html.Div([
         dbc.CardBody([
             dcc.Graph(figure=patator_fig),
             dbc.Alert(
-                "Lorem ipsum "
-                "Lorem ipsum 2",
-                color="secondary",
+                [
+                    html.I(className="bi bi-info-circle"),
+                    " No major differences can be seen making those specific patator attacks difficult to detect.",
+                ],
+                color="info",
                 className="mt-2",
                 style={"font-size": "0.9rem"}
             )

@@ -86,9 +86,11 @@ layout = html.Div([
         dbc.CardBody([
             dcc.Graph(figure=violin_fig),
             dbc.Alert(
-                "Lorem ipsum "
-                "Lorem ipsum 2",
-                color="primary",
+                [
+                    html.I(className="bi bi-info-circle"),
+                    " As visible, when sql injection is many times done by a semi-automated tool or human itself, it shows very similar pattern to benign traffic. For contrast, portscan focuses on very quick and fully automated requests.",
+                ],
+                color="info",
                 className="mt-2",
                 style={"font-size": "0.9rem"}
             )
@@ -99,13 +101,13 @@ layout = html.Div([
     dbc.Card([
         dbc.CardBody([
             dcc.Graph(figure=bar_fig),
-            dbc.Alert(
-                "Lorem ipsum "
-                "Lorem ipsum 2",
-                color="info",
-                className="mt-2",
-                style={"font-size": "0.9rem"}
-            )
+            # dbc.Alert(
+            #     "Lorem ipsum "
+            #     "Lorem ipsum 2",
+            #     color="info",
+            #     className="mt-2",
+            #     style={"font-size": "0.9rem"}
+            # )
         ])
     ], className="mb-4 shadow-sm"),
 
@@ -114,9 +116,11 @@ layout = html.Div([
         dbc.CardBody([
             dcc.Graph(figure=box_fig),
             dbc.Alert(
-                "Lorem ipsum "
-                "Lorem ipsum 2",
-                color="secondary",
+                [
+                    html.I(className="bi bi-info-circle"),
+                    " As nature of portscan attacks is to attack in bursts, the idle or inactivity within a single connection, is significantly smaller and repeatably similiar between attacks.",
+                ],
+                color="info",
                 className="mt-2",
                 style={"font-size": "0.9rem"}
             )
