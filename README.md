@@ -21,6 +21,7 @@ data, and to build an interactive dashboard.
 -   **Visualization**: Matplotlib, Seaborn, Plotly
 -   **Web Framework**: Dash
 -   **Machine Learning**: Scikit-learn, TensorFlow/Keras
+-   **Hosting**: Render.com
 
 ## Installation and Usage
 
