@@ -84,3 +84,9 @@ if __name__ == "__main__":
     fri_dfs = [expander.expand(expander.load_dataset(day)) for day in fri_parts]
     fri_full = pd.concat(fri_dfs, ignore_index=True)
     expander.save_expanded(fri_full, "../data/Fri-Expanded.csv")
+
+    # Comine all days into a full dataset
+    all_days = ['Mon', 'Tue', 'Wed'] + thu_parts + fri_parts
+    all_dfs = [expander.expand(expander.load_dataset(day)) for day in all_days]
+    full_dataset = pd.concat(all_dfs, ignore_index=True)
+    expander.save_expanded(full_dataset, "../data/Full-Expanded.csv")
