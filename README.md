@@ -59,7 +59,6 @@ python .\app.py
 ```
 After that, open your web browser and navigate to `http://127.0.0.1:8050` to access the dashboard.
 
-### Examples
 
 ## Dashboard Screenshots
 
